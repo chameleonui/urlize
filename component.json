@@ -1,0 +1,14 @@
+{
+  "name": "urlize",
+  "repo": "chameleoniu/urlize",
+  "description": "Converts strings to more url friendly",
+  "version": "1.0.0",
+  "keywords": [],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ]
+}
