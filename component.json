@@ -1,8 +1,8 @@
 {
   "name": "urlize",
   "repo": "chameleoniu/urlize",
-  "description": "Converts strings to more url friendly",
-  "version": "1.0.0",
+  "description": "Converts any crazyfull strings to url friendly",
+  "version": "1.0.1",
   "keywords": [],
   "dependencies": {},
   "development": {},

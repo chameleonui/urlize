@@ -1,5 +1,5 @@
 /**
- * Generate a slug from the given `str`
+ * Generate a urlized slug from the given `str`
  * 
  * @param {String} str
  * @return {String}
@@ -24,14 +24,17 @@ module.exports = function(str){
         { "find": "[úůûüùūÚŮÛÜÙŪ]", "replaceBy": "u" },
         { "find": "[ýÿÝŸ]", "replaceBy": "y" },
         { "find": "[žźżŽŹŻ]", "replaceBy": "z" },
-        { "find": "\\s\\s*", "replaceBy": " " },
-        { "find": "^\\s", "replaceBy": "" },
-        { "find": "\\s$", "replaceBy": "" },
-        { "find": "\\s", "replaceBy": "-" },
-        { "find": "[^a-z0-9-_/]", "replaceBy": "" } // safety net
+        { "find": "([\\s]+)", "replaceBy": "-" },
+        { "find": "[^a-z0-9-/]", "replaceBy": "" }, // safety net
+        { "find": "(-){0,}(\/)(-){0,}", "replaceBy": "/" },
+        { "find": "([/]+)", "replaceBy": "/" },
+        { "find": "([-]+)", "replaceBy": "-" },
+        { "find": "(-$)", "replaceBy": "" },
+        { "find": "(^-)", "replaceBy": "" },
+        { "find": "^([^\/])", "replaceBy": "/$1" }
     ]
 
-    str = str.toLowerCase();
+    str = str.toLowerCase().trim();
     for (var l = map.length - 1, i = 0; i <= l; i++) {
         str = str.replace(new RegExp(map[i].find, 'g'), map[i].replaceBy);
     };
