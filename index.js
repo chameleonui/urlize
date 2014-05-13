@@ -25,7 +25,8 @@ module.exports = function(str){
         { "find": "[ýÿÝŸ]", "replaceBy": "y" },
         { "find": "[žźżŽŹŻ]", "replaceBy": "z" },
         { "find": "([\\s]+)", "replaceBy": "-" },
-        { "find": "[^a-z0-9-/]", "replaceBy": "" }, // safety net
+        { "find": "[^a-z0-9-_/]", "replaceBy": "" }, // safety net
+        { "find": "([_]+)", "replaceBy": "-" },
         { "find": "(-){0,}(\/)(-){0,}", "replaceBy": "/" },
         { "find": "([/]+)", "replaceBy": "/" },
         { "find": "([-]+)", "replaceBy": "-" },

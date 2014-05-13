@@ -1,14 +1,14 @@
 {
   "name": "slugify",
-  "version": "1.0.0",
-  "description": "Converts even non-ASCII strings to nice slug",
+  "version": "1.0.2",
+  "description": "Converts any mad and crazy strings to url friendly",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
+    "mocha": "^1.18.2"
   },
   "scripts": {
     "test": "mocha"

@@ -1,21 +1,22 @@
 
 # urlize
 
-  Converts strings to more url friendly
+Converts any mad and crazy strings to url friendly
 
 
 ## Installation
 
-  Install with [component](http://github.com/component/component):
+Install with [component](http://github.com/component/component):
 
-    $ component install chameleoniu/urlize
-
+```bash
+$ component install chameleoniu/urlize
+```
 
 ## API
 
 ### urlize(string):string
 
-Returns urlized string e.g. `ted$@#wd  ^st/tw est` became `tedwd-st/tw-est`
+Returns urlized string e.g. `ted$@#wd  ^st/tw est  --` became `/tedwd-st/tw-est`
 
 
 ## Author(s)
